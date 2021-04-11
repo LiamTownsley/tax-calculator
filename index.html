@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -35,17 +36,18 @@
             <div id="summary">
                 <div id="summary-left">
                     <h1>PROFITS</h1>
-                    <p>You have made <span class="profit">£540</span> in net profits.</p>
+                    <p>You have made <span id="profit" class="profit">£0</span> in net profits.</p>
                 </div>
                 <div id="summary-right">
                     <h1>TAXES</h1>
-                    <p>You have to pay <span class="loss">£60</span> in taxes.</p>
+                    <p>You have to pay <span id="loss" class="loss">£0</span> in taxes.</p>
                 </div>
             </div>
             <div id="summary-button-group">
                 <button
                     id="summary-button"
                     class="summary-button addmoney-button"
+                    onclick="addMoney()"
                 >Add Money</button>
                 <button
                     id="summary-button"
@@ -60,7 +62,7 @@
 
         <div id="transaction-history">
             <h1>TRANSACTION HISTORY</h1>
-            <table>
+            <table id="trans-table">
                 <tr>
                     <th scope="col">Date</th>
                     <th scope="col">Transaction Name</th>
@@ -68,37 +70,8 @@
                     <th scope="col">Tax Amount</th>
                     <th scope="col">Reference ID</th>
                 </tr>
-                <tr>
-                    <td>10/03/2021</td>
-                    <td>Rent Payment - Property #8</td>
-                    <td>£100.00</td>
-                    <td>£10.00</td>
-                    <td>RJX-441-585-333</td>
-                </tr>
-                <tr>
-                    <td>10/03/2021</td>
-                    <td>Rent Payment - Property #2</td>
-                    <td>£150.00</td>
-                    <td>£15.00</td>
-                    <td>RJX-391-353-441</td>
-                </tr>
-                <tr>
-                    <td>10/03/2021</td>
-                    <td>Rent Payment - Property #3</td>
-                    <td>£200.00</td>
-                    <td>£20.00</td>
-                    <td>RJX-554-665-672</td>
-                </tr>
-                <tr>
-                    <td>10/02/2021</td>
-                    <td>Rent Payment - Property #2</td>
-                    <td>£150.00</td>
-                    <td>£15.00</td>
-                    <td>RJX-508-873-260</td>
-                </tr>
             </table>
         </div>
-</form>
     </main>
     <footer>
         <p>Made with <span style="color:red;">♥</span> by <a href="https://github.com/LiamTownsley" target="_blank">Liam Townsley</a></p>
